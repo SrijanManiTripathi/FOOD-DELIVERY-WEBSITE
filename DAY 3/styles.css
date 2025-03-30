@@ -1,0 +1,517 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    text-align: center;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: white;
+    padding: 18px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Title */
+h1 {
+    color: #c21807;
+    font-size: 38px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(194, 24, 7, 0.1);
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(90deg, #c21807, transparent);
+    bottom: -8px;
+    left: 20%;
+    border-radius: 2px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 18px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    background: linear-gradient(135deg, #ff6a00, #e65100);
+    color: white;
+    padding: 14px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(230, 81, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.nav-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.nav-btn:hover {
+    background: linear-gradient(135deg, #e65100, #ff6a00);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(230, 81, 0, 0.3);
+}
+
+.nav-btn:hover:before {
+    left: 100%;
+}
+
+/* Welcome Text */
+.welcome-text {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 40px auto;
+    max-width: 75%;
+    color: #333;
+    line-height: 1.4;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.welcome-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 40%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #c21807, transparent);
+    border-radius: 2px;
+}
+
+/* Featured Section */
+.featured {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 35px auto;
+    width: 85%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #c21807, #ff6a00);
+}
+
+.featured h2 {
+    color: #c21807;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.featured h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #c21807, transparent);
+    bottom: -8px;
+    left: 25%;
+    border-radius: 2px;
+}
+
+/* Product Section */
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    width: 270px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #43a047, #66bb6a);
+}
+
+.product:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Order Button */
+.order-btn {
+    background: linear-gradient(135deg, #43a047, #2e7d32);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.4s ease;
+    width: 100%;
+    margin: 20px auto 5px;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.order-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.order-btn:hover {
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.3);
+}
+
+.order-btn:hover:before {
+    left: 100%;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    background: linear-gradient(135deg, #222, #333);
+    color: white;
+    padding: 30px 20px;
+    font-size: 16px;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #c21807, #ff6a00, #43a047);
+}
+
+/* Chatbot Icon */
+#chatbot-icon {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #ff9800, #e68900);
+    padding: 16px;
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(230, 137, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+#chatbot-icon img {
+    width: 42px;
+    height: 42px;
+    transition: all 0.4s ease;
+}
+
+#chatbot-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(230, 137, 0, 0.4);
+}
+
+#chatbot-icon:hover img {
+    transform: rotate(-5deg);
+}
+
+/* Chatbot Window */
+#chatbot {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    width: 360px;
+    background: white;
+    border-radius: 20px;
+    display: none;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease-out;
+    overflow: hidden;
+    z-index: 1000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    background: linear-gradient(135deg, #ff9800, #e68900);
+    color: white;
+    padding: 18px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chatbot-header button:hover {
+    transform: scale(1.2);
+}
+
+/* Chat Messages */
+.chatbot-messages {
+    height: 280px;
+    padding: 18px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    border-bottom: 3px solid #ff9800;
+    scroll-behavior: smooth;
+}
+
+.message {
+    margin-bottom: 12px;
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.bot-message {
+    background: #f1f1f1;
+    border-top-left-radius: 0;
+    margin-right: auto;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.user-message {
+    background: #ff9800;
+    color: white;
+    border-top-right-radius: 0;
+    margin-left: auto;
+    box-shadow: 2px 2px 8px rgba(255, 152, 0, 0.2);
+}
+
+/* User Input */
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: white;
+}
+
+#userInput {
+    width: 75%;
+    padding: 12px 16px;
+    border: 2px solid #ff9800;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#userInput:focus {
+    border-color: #e65100;
+    box-shadow: 0 0 8px rgba(230, 81, 0, 0.2);
+}
+
+#sendButton {
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sendButton:hover {
+    background: #e68900;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 10px;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    .welcome-text {
+        font-size: 26px;
+        max-width: 90%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-btn {
+        min-width: 200px;
+        padding: 12px 20px;
+    }
+    
+    .featured {
+        padding: 30px 20px;
+        width: 90%;
+    }
+    
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 20px 10px;
+    }
+    
+    .product {
+        width: 85%;
+        max-width: 300px;
+    }
+    
+    #chatbot {
+        width: 90%;
+        max-width: 340px;
+        right: 5%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured {
+        padding: 25px 15px;
+        width: 92%;
+    }
+    
+    .nav-btn {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+    
+    .welcome-text {
+        font-size: 22px;
+    }
+    
+    .order-btn {
+        font-size: 16px;
+    }
+}

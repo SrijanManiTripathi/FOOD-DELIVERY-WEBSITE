@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online FoodShop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="chatbot.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><span class="red">Online</span> FoodShop</h1>
+        <nav>
+            <ul>
+                <li><a href="#"><button class="nav-btn">Home</button></a></li>
+                <li><a href="about.html"><button class="nav-btn">About</button></a></li>
+                <li><a href="menu.html"><button class="nav-btn">Menu</button></a></li>
+                <li><a href="contact.html"><button class="nav-btn">Contact Us</button></a></li>
+                <li><a href="order.html"><button class="order-btn">ORDER NOW</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="welcome-text">Welcome to Online FoodShop</h2>
+        
+        <section class="featured">
+            <h2>Featured Products</h2>
+            <div class="product-container">
+                <div class="product">
+                    <img src="burger.jpg" alt="Burger and Fries">
+                    <button class="order-btn">ORDER NOW</button>
+                </div>
+                <div class="product">
+                    <img src="curry.jpeg" alt="Curry">
+                    <button class="order-btn">ORDER NOW</button>
+                </div>
+                <div class="product">
+                    <img src="rice.jpeg" alt="Fried Rice">
+                    <button class="order-btn">ORDER NOW</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2020-2021 OnlineFoodShop. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">
+        <img src="Chatbot.gif" alt="Chatbot">
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot" style="display: none;">
+        <div class="chatbot-header">
+            <h3>Support Bot</h3>
+            <button onclick="toggleChatbot()">X</button>
+        </div>
+        <div class="chatbot-messages">
+            <p class="bot-message">Hello! How can I help you today? 😊</p>
+        </div>
+        <input type="text" id="userInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</body>
+</html>
+
